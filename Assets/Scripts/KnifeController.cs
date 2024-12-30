@@ -1,8 +1,10 @@
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KnifeController : MonoBehaviour
 {
+    private KnifeManager knifeManager;
     private Rigidbody2D knifeRigidBody;
     [SerializeField] private float moveSpeed;
 
@@ -27,7 +29,9 @@ public class KnifeController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+           
             canShoot = true;
+            
         }
     }
 
@@ -43,9 +47,14 @@ public class KnifeController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Circle"))
         {
+            knifeManager.SetActiveKnife();
             canShoot = false;
             knifeRigidBody.isKinematic = true;
             transform.SetParent(other.gameObject.transform);
+        }
+
+        if (other.gameObject.CompareTag("Knife")){
+            SceneManager.LoadScene(0);
         }
     }
 
@@ -53,5 +62,6 @@ public class KnifeController : MonoBehaviour
     private void GetComponentValues()
     {
         knifeRigidBody = GetComponent<Rigidbody2D>();
+        knifeManager = GameObject.FindObjectOfType<KnifeManager>();
     }
 }

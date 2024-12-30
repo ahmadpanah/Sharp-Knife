@@ -231,7 +231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876489251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.27747148, y: 0.6027029, z: -0.09176315}
+  m_LocalPosition: {x: -0, y: -3.47, z: -0.09176315}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -250,7 +250,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knifeList: []
+  knifeIconList: []
   knifePrefab: {fileID: 7705661853667522615, guid: 1d65118a2e8334244b2d5f978cbe63de, type: 3}
+  knifeIconPrefab: {fileID: 7198160169902796148, guid: b1c29cbdb592a7145ac3d965edbd443d, type: 3}
+  knifeIconPosition: {x: -1.8, y: -4}
+  activeColor: {r: 0.9339623, g: 0.8677352, b: 0.05639012, a: 1}
+  disableColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 0.5254902}
   knifeCount: 10
 --- !u!1 &1836901527
 GameObject:
