@@ -32,7 +32,7 @@ public class KnifeController : MonoBehaviour
            
             canShoot = true;
             knifeManager.SetDisableKnifeIconColor();
-
+            
         }
     }
 
@@ -52,7 +52,6 @@ public class KnifeController : MonoBehaviour
             canShoot = false;
             knifeRigidBody.isKinematic = true;
             transform.SetParent(other.gameObject.transform);
-           
         }
 
         if (other.gameObject.CompareTag("Knife")){
