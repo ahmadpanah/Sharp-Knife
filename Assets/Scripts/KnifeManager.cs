@@ -1,6 +1,6 @@
 
 using System.Collections.Generic;
-using UnityEditor.U2D.Path;
+//using UnityEditor.U2D.Path;
 using UnityEngine;
 
 public class KnifeManager : MonoBehaviour
@@ -44,7 +44,7 @@ public class KnifeManager : MonoBehaviour
             GameObject newKnifeIcon = Instantiate(knifeIconPrefab, knifeIconPosition, knifeIconPrefab.transform.rotation);
             newKnifeIcon.GetComponent<SpriteRenderer>().color = activeColor;
             knifeIconPosition.y += 0.5f;
-            knifeList.Add(newKnifeIcon);
+            knifeIconList.Add(newKnifeIcon);
         }
     }
 
@@ -55,7 +55,7 @@ public class KnifeManager : MonoBehaviour
 
     public void SetActiveKnife()
     {
-        if (knifeIndex < knifeCount)
+        if (knifeIndex < knifeCount-1)
         {
             knifeIndex++;
             knifeList[knifeIndex].SetActive(true);

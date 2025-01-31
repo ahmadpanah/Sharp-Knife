@@ -31,6 +31,7 @@ public class KnifeController : MonoBehaviour
         {
            
             canShoot = true;
+            knifeManager.SetDisableKnifeIconColor();
             
         }
     }
